@@ -1,1 +1,35 @@
 # Project_Predict_Bike_Sharing_Demand_with_AutoGluon
+
+
+## Overview  
+In this project, I used the AutoGluon library to build a regression model that predicts bike sharing demand based on temporal and weather data. The project involved exploratory data analysis, feature engineering, and hyperparameter tuning to improve model performance.
+
+## Workflow  
+- **Exploratory Data Analysis (EDA):** Examined the distribution of features and added new features extracted from the datetime column such as year, month, day, and hour. Converted some columns to categorical data types.  
+- **Model Training:** Used AutoGluon to train a regression model and converted negative prediction values to zero to avoid submission rejection on Kaggle.  
+- **Performance Improvement:** Tuned model hyperparameters like number of layers, dropout probability, and learning rate to enhance accuracy.
+
+## Results  
+| Stage                       | RMSE     |  
+|----------------------------|----------|  
+| Initial Training            | 1.99863  |  
+| After Adding Features       | 0.61168  |  
+| After Hyperparameter Tuning | 0.45804  |
+
+## Plots  
+- ![Training Score Plot](model_train_score.png)  
+- ![Test Submission Score Plot](model_test_score.png)
+
+## Files  
+- `Project_Predict_Bike_Sharing_Demand_with_AutoGluon.ipynb`: Jupyter Notebook with the project code and analysis  
+- `Project_Predict_Bike_Sharing_Demand_with_AutoGluon.html`: Exported HTML version of the notebook
+- Project report: `report.pdf`  
+- Images are uploaded in the root directory.
+
+## Dataset  
+Training and test datasets are not included due to size. They can be downloaded from the [Kaggle Bike Sharing Demand competition page](https://www.kaggle.com/c/bike-sharing-demand/data).
+
+## Requirements  
+To run this project, you need to install the following Python packages:  
+```bash  
+pip install autogluon kaggle pandas matplotlib  
