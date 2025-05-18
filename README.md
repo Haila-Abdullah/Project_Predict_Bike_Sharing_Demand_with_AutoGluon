@@ -17,8 +17,8 @@ In this project, I used the AutoGluon library to build a regression model that p
 | After Hyperparameter Tuning | 0.45804  |
 
 ## Plots  
-- ![Training Score Plot](model_train_score.png)  
-- ![Test Submission Score Plot](model_test_score.png)
+![Training Score Plot](model_train_score.png)  
+![Test Submission Score Plot](model_test_score.png)
 
 ## Files  
 - `Project_Predict_Bike_Sharing_Demand_with_AutoGluon.ipynb`: Jupyter Notebook with the project code and analysis  
@@ -30,6 +30,12 @@ In this project, I used the AutoGluon library to build a regression model that p
 Training and test datasets are not included due to size. They can be downloaded from the [Kaggle Bike Sharing Demand competition page](https://www.kaggle.com/c/bike-sharing-demand/data).
 
 ## Requirements  
-To run this project, you need to install the following Python packages:  
-```bash  
-pip install autogluon kaggle pandas matplotlib  
+
+To run this project locally, you'll need to install the following Python packages. These steps ensure compatibility with AutoGluon and its dependencies:
+
+```bash
+pip install -U pip
+pip install -U setuptools wheel
+pip install -U "mxnet<2.0.0" bokeh==2.0.1
+pip install autogluon --no-cache-dir
+pip install kaggle pandas matplotlib
